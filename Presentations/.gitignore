@@ -1,0 +1,16 @@
+# Emacs stuff
+*~
+auto/*
+# TeX stuff
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.nav
+*.out
+*.snm
+*.pdf
+*.vrb
+*.run.xml
+*.toc

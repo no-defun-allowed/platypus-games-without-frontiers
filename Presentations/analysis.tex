@@ -1,0 +1,103 @@
+\documentclass[a4paper]{article}
+
+% fonts
+\usepackage{microtype}
+\usepackage{ClearSans}
+\usepackage{charter}
+\usepackage[tt]{algolrevived}
+
+% layout
+\usepackage[table]{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+
+% titles
+\usepackage{titlesec}
+\usepackage{titling}
+\titleformat*{\section}{\Large\raggedright\bfseries\sffamily}
+\titleformat*{\subsection}{\Large\raggedright\sffamily}
+\titleformat*{\subsubsection}{\large\raggedright\sffamily}
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\title{The \emph{Platypus Games Without Frontiers} slides and analysis}
+\author{Hayley Patton}
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Progress presentation 1}
+
+\includepdf[nup=1x2, pages=-]{progress-1.pdf}
+
+\section{Progress presentation 2}
+
+\includepdf[nup=1x2, pages=-]{progress-2.pdf}
+
+\section{Final presentation}
+
+\includepdf[nup=1x2, pages=-]{final.pdf}
+
+\section{Analysis of learning outcomes}
+
+\subsection{Creative thinking}
+
+The project was based on the theory by James Harland that it would
+be infeasible to run the Platypus game, whereas I had speculated that
+it would be possible, but had no evidence towards it being possible. It
+was only until the end of the project, when using cloud computing,
+that a schedule for successfully completing the project could be built
+around the projected time needed to run the tournament.
+
+The SIMD-based interpreter required much effort to implement, and I
+did not have any evidence that it would be faster than the original
+na\"ive interpreter.
+
+\subsection{Responsibility}
+
+Due to the limited audience of the project, the main ethical issue I
+identified was the energy usage of running the Platypus tournament,
+which could be large for the narrow utility derived from the results of the
+tournament. I found that performance optimisations would consistently
+reduce the projected energy usage with my desktop; I cannot measure the
+energy used in cloud computing, but AWS offers newer GPUs which I assume
+have better energy efficiency than my older desktop GPU.
+
+\subsection{Critical thinking}
+
+I had initially assumed that having lanes be idle in the SIMD-based
+interpreter would be detrimental to performance, would the interpreter
+wait for matches in all lanes to finish. Later benchmarks indicated that
+refilling any lane when it finishes was 15\% to 32\% faster which is
+still a speedup, but smaller than what I assumed.
+
+My results for energy efficiency of the na\"ive (scalar) and SIMD interpreters
+conflicted with published results on energy efficiency of SIMD code, but the
+published results were for a different processor micro-architecture and with
+different (but more precise) power measurement instruments.
+
+Analysis of the results of the full Platypus tournament indicated that future
+users of the methodology (of equivalence detection and brute forcing on cloud
+GPUs) could further benefit from using an appropriate definition of
+equivalence. I didn't any obvious equivalences between the top 10 machines,
+but I did miss various phenomena which cause machines to perform
+identically in the tournament despite behaving differently.
+
+\subsection{Problem solving}
+
+Multiple equivalence detection algorithms and interpreters were created
+during the project, but some algorithms were strictly better and so there
+were hardly any tradeoffs between the alternatives. The faster interpreters
+were more energy efficient as forementioned, and the more precise
+equivalence detection algorithms were not much slower to run.
+
+\subsection{Team working}
+
+This subsection intentionally left blank.
+
+\end{document}

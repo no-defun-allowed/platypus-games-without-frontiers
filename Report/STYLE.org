@@ -1,0 +1,20 @@
+* Glossary
+
+- board: A finite, cyclic sequence of symbols which both players of a
+  Platypus game manipulate.
+- cell: A position on the board.
+- mirror image: A machine which has the roles of the Emu and Wombat
+  states reversed with regards to another machine.
+- Platypus game: The theoretical game where Platypus machines compete
+  to change symbols on a board.
+- Platypus match: The execution of the game rules with two specific
+  machines.
+- Platypus tournament: Running matches between every possible
+  combination of machines, including playing oneself and swapped
+  players.
+- tape: An infinite sequence of symbols which a Turing machine may
+  manipulate. *Do not use* for the state of a Platypus game.
+
+* Writing
+
+- Capitalise all symbols used in the Platypus game. e.g. Green, Kangaroo, Ghost Gum

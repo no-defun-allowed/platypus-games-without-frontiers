@@ -1,0 +1,232 @@
+@unpublished{baumann,
+author = {Gilbert Baumann},
+title = {Tagged extended regular expressions with submatch addressing and their conversion to {DFAs}},
+year = 2016,
+note = {Unpublished}
+}
+
+@article{bit-stealing,
+author = {Baudon, Tha\"{\i}s and Radanne, Gabriel and Gonnord, Laure},
+title = {Bit-Stealing Made Legal: Compilation for Custom Memory Representations of Algebraic Data Types},
+year = {2023},
+issue_date = {August 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {7},
+number = {ICFP},
+url = {https://doi.org/10.1145/3607858},
+doi = {10.1145/3607858},
+journal = {Proc. ACM Program. Lang.},
+month = 8,
+articleno = {216},
+numpages = {34},
+keywords = {Algebraic Data Types, Pattern Matching, Data Layouts, Compilation}
+}
+
+@book{common-lisp,
+author = {},
+title = {INCITS 226-1994[S2008] Information Technology, Programming Language, Common Lisp},
+publisher = {American National Standards Institute},
+year = {1994}
+}
+
+@online{core-to-core,
+author = {Ian Cutress},
+title = {{AMD} {Zen} 3 {Ryzen} deep dive review: 5950X, 5900X, 5800X and 3600 tested},
+publisher = {AnandTech},
+year = {2020},
+url = {https://www.anandtech.com/show/16214/amd-zen-3-ryzen-deep-dive-review-5950x-5900x-5800x-and-5700x-tested/5}
+}
+
+@online{core-to-core-2,
+author = {Nicolas Viennot},
+title = {Measuring {CPU} core-to-core latency},
+year = {2023},
+url = {https://github.com/nviennot/core-to-core-latency}
+}
+
+@online{crack.sh,
+author = {{ToorCon, Inc.}},
+title = {The world's fastest {DES} cracker},
+url = {https://crack.sh/}
+}
+
+@online{deep-crack,
+author = {Electronic Frontier Foundation},
+title = {``{EFF} {DES} cracker'' machine brings honesty to crypto debate},
+year = 1998,
+url = {https://w2.eff.org/Privacy/Crypto/Crypto_misc/DESCracker/HTML/19980716_eff_descracker_pressrel.html}
+}
+
+@misc{expand-apl,
+author = {{APL} Wiki},
+title = {Expand},
+year = {2022},
+url = {https://aplwiki.com/index.php?title=Expand&oldid=9453}
+}
+
+@misc{gpu-first,
+title={GPU First -- Execution of Legacy CPU Codes on GPUs}, 
+author={Shilei Tian and Tom Scogland and Barbara Chapman and Johannes Doerfert},
+year={2023},
+eprint={2306.11686},
+archivePrefix={arXiv},
+primaryClass={cs.DC}
+}
+
+@incollection{hopcroft,
+title = {An $n \log n$ algorithm for minimizing states in a finite automaton},
+editor = {Zvi Kohavi and Azaria Paz},
+booktitle = {Theory of Machines and Computations},
+publisher = {Academic Press},
+pages = {189-196},
+year = {1971},
+isbn = {978-0-12-417750-5},
+doi = {10.1016/B978-0-12-417750-5.50022-1},
+author = {John Hopcroft}
+}
+
+@inproceedings{hyperscan,
+author = {Wang, Xiang and Hong, Yang and Chang, Harry and Park, KyoungSoo and Langdale, Geoff and Hu, Jiayu and Zhu, Heqing},
+title = {Hyperscan: A Fast Multi-Pattern Regex Matcher for Modern {CPUs}},
+year = {2019},
+isbn = {9781931971492},
+publisher = {USENIX Association},
+address = {USA},
+booktitle = {Proceedings of the 16th USENIX Conference on Networked Systems Design and Implementation},
+pages = {631–648},
+numpages = {18},
+location = {Boston, MA, USA},
+series = {NSDI'19}
+}
+
+@article{implicit-data-structures,
+title = {Implicit data structures for fast search and update},
+journal = {Journal of Computer and System Sciences},
+volume = 21,
+number = 2,
+pages = {236-250},
+year = 1980,
+issn = {0022-0000},
+doi = {10.1016/0022-0000(80)90037-9},
+author = {J. Ian Munro and Hendra Suwanda}
+}
+
+@online{lemire,
+title = {Arbitrary byte-to-byte maps using ARM NEON?},
+author = {Daniel Lemire},
+year = 2019,
+url = {https://lemire.me/blog/2019/07/23/arbitrary-byte-to-byte-maps-using-arm-neon/}
+}
+
+@article{mealy,
+author={Mealy, George H.},
+journal={The Bell System Technical Journal}, 
+title={A method for synthesizing sequential circuits}, 
+year={1955},
+volume={34},
+number={5},
+pages={1045-1079},
+doi={10.1002/j.1538-7305.1955.tb03788.x}
+}
+
+@inproceedings{10.1145/2814270.2814275,
+author = {Marr, Stefan and Ducasse, St\'{e}phane},
+title = {Tracing vs. Partial Evaluation: Comparing Meta-Compilation Approaches for Self-Optimizing Interpreters},
+year = {2015},
+isbn = {9781450336895},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2814270.2814275},
+doi = {10.1145/2814270.2814275},
+abstract = {Tracing and partial evaluation have been proposed as meta-compilation techniques for interpreters to make just-in-time compilation language-independent. They promise that programs executing on simple interpreters can reach performance of the same order of magnitude as if they would be executed on state-of-the-art virtual machines with highly optimizing just-in-time compilers built for a specific language. Tracing and partial evaluation approach this meta-compilation from two ends of a spectrum, resulting in different sets of tradeoffs. This study investigates both approaches in the context of self-optimizing interpreters, a technique for building fast abstract-syntax-tree interpreters. Based on RPython for tracing and Truffle for partial evaluation, we assess the two approaches by comparing the impact of various optimizations on the performance of an interpreter for SOM, an object-oriented dynamically-typed language. The goal is to determine whether either approach yields clear performance or engineering benefits. We find that tracing and partial evaluation both reach roughly the same level of performance. SOM based on meta-tracing is on average 3x slower than Java, while SOM based on partial evaluation is on average 2.3x slower than Java. With respect to the engineering, tracing has however significant benefits, because it requires language implementers to apply fewer optimizations to reach the same level of performance.},
+booktitle = {Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications},
+pages = {821–839},
+numpages = {19},
+keywords = {partial evaluation, just-in-time compilation, comparison, meta-tracing, language implementation, self-optimizing interpreters, case study},
+location = {Pittsburgh, PA, USA},
+series = {OOPSLA 2015}
+}
+
+@article{meta-compilation,
+author = {Marr, Stefan and Ducasse, St\'{e}phane},
+title = {Tracing vs. Partial Evaluation: Comparing Meta-Compilation Approaches for Self-Optimizing Interpreters},
+year = {2015},
+issue_date = {October 2015},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {50},
+number = {10},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/2858965.2814275},
+doi = {10.1145/2858965.2814275},
+journal = {SIGPLAN Not.},
+month = 10,
+pages = {821–839},
+numpages = {19},
+keywords = {meta-tracing, language implementation, case study, partial evaluation, just-in-time compilation, self-optimizing interpreters, comparison}
+}
+
+
+
+@article{nerode,
+ ISSN = {00029939, 10886826},
+ URL = {http://www.jstor.org/stable/2033204},
+ author = {A. Nerode},
+ journal = {Proceedings of the American Mathematical Society},
+ number = {4},
+ pages = {541--544},
+ publisher = {American Mathematical Society},
+ title = {Linear Automaton Transformations},
+ urldate = {2023-08-03},
+ volume = {9},
+ year = {1958}
+}
+
+@inproceedings{organizing-functional-code,
+author = {Steele, Guy L.},
+title = {Organizing Functional Code for Parallel Execution or, Foldl and Foldr Considered Slightly Harmful},
+year = {2009},
+isbn = {9781605583327},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1596550.1596551},
+doi = {10.1145/1596550.1596551},
+pages = {1–2},
+numpages = {2},
+keywords = {associative operator, tree, conjugate transform, reduction, monoid},
+location = {Edinburgh, Scotland},
+series = {ICFP '09}
+}
+
+@online{sheng,
+title = {``Say Hello To My Little Friend'': Sheng, a small but fast Deterministic Finite Automaton},
+author = {Geoff Langdale},
+year = 2018,
+url = {https://branchfree.org/2018/05/25/say-hello-to-my-little-friend-sheng-a-small-but-fast-deterministic-finite-automaton/}
+}
+
+@article{triangle,
+author = {Baker, Henry G.},
+title = {The Gabriel ``Triangle'' Benchmark at Warp Speed},
+year = {1992},
+issue_date = {July-Sept. 1992},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {V},
+number = {3},
+issn = {1045-3563},
+doi = {10.1145/147135.147140},
+journal = {SIGPLAN Lisp Pointers},
+month = 8,
+pages = {15–17},
+numpages = {3}
+}
+
+@techreport{vectorized,
+title={Experimental analysis of vectorized instructions impact on energy and power consumption under thermal design power constraints},
+author = {Amina Guermouche and Anne-C\'ecile Orgerie},
+institution = {T\'el\'ecom Sud Paris},
+year = 2019,
+url = {https://hal.science/hal-02167083/}
+}

@@ -1,0 +1,62 @@
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{biblatex}
+\usepackage{fancyvrb}
+\usepackage{fontspec}
+\usepackage[margin=1.5in,a4paper]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.7}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{arrows, fit, positioning, quotes}
+\usepackage{titlesec}
+\usepackage{titling}
+
+\setmainfont{Linux Libertine}
+\setsansfont[Scale=0.9]{Open Sans}
+\setmonofont[Scale=0.9]{Inconsolata}
+\newfontfamily\headfamily[]{Chicago}
+\titleformat*{\section}{\Large\headfamily}
+\titleformat*{\subsection}{\large\headfamily}
+\titleformat*{\subsubsection}{\large\headfamily}
+\renewcommand{\maketitlehooka}{\headfamily}
+
+\newcommand{\setb}[1]{\left\{ #1 \right\}}
+\newcommand{\q}[1]{\mathsf{#1}}
+\newcommand{\todo}[1]{\textbf{TODO: #1}}
+\newcommand{\dontcare}{\#}
+
+\addbibresource{games.bib}
+
+\widowpenalty=500
+\clubpenalty=500
+
+\begin{document}
+\title{Platypus Games Without Frontiers}
+\author{Hayley Patton}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\input{introduction.tex}
+\input{equivalences.tex}
+\input{run-game.tex}
+\input{results.tex}
+\input{conclusion.tex}
+
+\printbibliography
+
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% End: 

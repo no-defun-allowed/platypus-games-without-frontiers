@@ -1,0 +1,65 @@
+\chapter{Conclusion}
+
+The full Platypus tournament was originally speculated to be infeasible to
+run, but I have completed in 9 days by detecting equivalent machines and
+then using a fast interpreter for the remaining matches.
+
+Simple algorithms suffice to detect many equivalent machines: dead
+code elimination determines that three fifths of all possible Platypus
+machines are redundant, and additionally renaming the Emu and
+Wombat states of a machine makes four fifths of all Platpypus machines
+redundant. A more complex algorithm like an adaptation of DFA
+minimisation has diminishing returns, but stills help to reduce the
+number of remaining matches (which is quadratic to the number of
+remaining machines).
+
+While equivalence detection is much faster than running all of the
+remaining matches, faster equivalence detection allows for faster
+experimentation with detection algorithms, and speeds up finding
+counter-examples which were invaluable while testing new algorithms.
+The equivalence detection can be parallelised across multiple threads,
+and DFA minimisation for small machines like Platypus machines
+can further be sped up using a data-parallel algorithm.
+
+The Platypus tournament can be parallelised over multiple threads of a
+modern CPU, multiple lanes of single instruction-multiple data extensions,
+and the many lanes of GPUs, and over multiple computers. But care must
+be taken to avoid communicating all the results, as the atomic operations
+required to record a result of a match can take more time than running
+the match on large CPUs and GPUs; a distributed Platypus tournament
+similarly must avoid being bottlenecked by network latency when recording
+the results of many matches.
+
+\section{Future directions}
+
+The results suggest that we could reduce the time taken to run full
+tournaments of similar games by considering equivalences at a higher
+level of abstraction. For example, some machines will perform identically
+in a tournament while not behaving identically in each individual match,
+as I found for flipping directions in the Platypus game. More redundancy
+can be found by considering the possible behaviours of individual players in a
+multi-player game, as I found for the first player in the Platypus game.
+
+Further analysis of the results would be interesting, as I have only presented
+patterns in the top 10 machines of the full tournament and in the top 5
+machines for either player. I did not cover any trends or distributions within
+across all the machines; one could find the performance of machines with
+particular properties, such as if the Platypus state is reachable and thus the
+machine may halt the game.
+
+The results would also be useful to measure the accuracy of running
+competitions between machines with different structures. Such competitions
+involve fewer matches but might be less accurate, trading time for precision.
+The rankings from the full tournament could be compared to the rankings
+from some other competition to determine the accuracy of the competition.
+
+The interpreters and efficient representation require some tricky coding to
+implement, which at best requires more effort from researchers to get high
+performance, and at worst deters researchers from investigating similar
+games. Such deterrance could be reduced by tools to generate efficient
+representations and interpreters from less tricky specifications. Tools
+already exist for compiling specifications of custom representations of
+algebraic data types \cite{bit-stealing}, for converting interpreters
+into compilers \cite{meta-compilation}, and for automatically porting
+code written for CPUs to run on GPUs \cite{gpu-first}, which may all
+be relevant.
